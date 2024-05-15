@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: docker-spring-boot-postgres
+  datasource:
+    url: jdbc:postgresql://db:5432/postgres
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  hibernate:
+    ddl-auto: update
+  profiles:
+    active: ${ENV_NAME:local}
